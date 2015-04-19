@@ -1,0 +1,87 @@
+{% extends 'main.html' %}
+{% load staticfiles %}
+{% block content %}
+		<!--content-->
+		<div id="content">
+			<div class="title-block">
+			<div class="title" >
+				<h1 style="margin-left:0px">Контактная форма</h1>
+			</div>
+			<div class="blog-text">			
+				<p>				
+					Свяжитесь с нами через контактную форму на нашем сайте. Мы обязательно ответим Вам в течение 24 часов.
+				</p>				
+			</div>
+		</div>
+			<form  method="post" name="contact-form" id="contact-form" action="">
+
+				<div class="blog-title"> <strong>Ваша персональная информация</strong>
+				</div>
+
+				<div class="element-block">
+					<label>
+						<span class="required">*</span>
+						Полное имя:
+					</label>
+					<input name="name" type="text" class="box" id="name" size="30" value="" />
+				</div>
+
+				<div class="element-block">
+					<label>
+						<span class="required">*</span>
+						E-Mail:
+					</label>
+					<input name="email" type="text" class="box" id="email" size="30" value="" />
+				</div>
+
+				<div class="blog-title"> <strong>Ваше сообщение</strong>
+				</div>
+
+				<div class="element-block">
+					<label>
+						<span class="required">*</span>
+						Тема сообщения:
+					</label>
+					<input name="subject" type="text" class="box" id="subject" size="30" value="" />
+				</div>
+
+				<div class="element-block">
+					<label>
+						<span class="required">*</span>
+						Текст сообщения:
+					</label>
+					<textarea name="message" cols="40" rows="15"  id="message"></textarea>
+				</div>
+
+				<div class="element-block">
+					<label class="lblfile">
+						<span class="required"> </span>
+						Файл:
+					</label>
+					<input name="file" type="file" class="file" id="file" size="30" value="" />
+					<p class="description">Вы можете загрузить файл для отсылки вместе с сообщением</p>
+				</div>
+
+				
+
+				<div class="element-block">
+					<label>
+						<span class="required">*</span>
+						Проверка на спам:
+						<br /> <b>2 + 3=</b>
+					</label>
+					<input name="spamcheck" type="text" class="box" id="spamcheck" size="4" value="" />
+				</div>
+
+				<br />
+				<br />
+
+				<div class="element-block">
+					<!-- Submit Button-->
+					<input name="send" type="submit" class="button" id="send" value="Отправить" />
+				</div>
+
+			</form>
+
+		</div>
+{% endblock %}

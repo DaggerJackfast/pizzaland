@@ -1,0 +1,70 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PIZZALAND</title>
+	<meta http-equiv="Content-Type" content="text/html; charset='utf-8'">
+	<link rel="stylesheet" href="{% static "css/main.css" %}">
+	<script src="{% static 'js/jquery-2.1.1.min.js'%}"></script>
+	<script src="{% static 'js/liMarquee/jquery.liMarquee.js'%}"></script>
+	<link href="{% static 'js/liMarquee/liMarquee.css'%}" rel="stylesheet" />
+
+	<script type="text/javascript">
+		$(window).load(function(){
+			$('.str3').liMarquee();
+		});
+
+    </script>
+</head>
+
+<body>
+	<div id="outer">
+		<!--header-->
+		<div id="header">
+			<div class="logo">
+				<a href="/">PIZZALAND</a>
+			</div>
+
+			<div class="phone">0559 89-73-33</div>
+			<div class="user-greeting">
+				<div class="search">
+					<input type="text" name="search-in-site" class="search-input" placeholder="Поиск по сайту"/>
+					<input type="submit" name="search-submit" value=""/>
+				</div>
+				<div class="auth-block">
+					<a class ="sign-in" href="#">Вход</a>
+					<a class = "check-in" href="#">Регистрация</a>
+				</div>
+			</div>
+		</div>
+		<!--menu-->
+		<div id="menu">
+			<div class="menu-container">
+				<a href="/">ГЛАВНАЯ</a>
+				<a href="/about">О НАС</a>
+				<a href="/menu">МЕНЮ</a>
+				<a href="/contacts">КОНТАКТЫ</a>
+			</div>
+		</div>
+
+{% block content %}{% endblock %}
+
+<!--footer-->
+<div id="footer">
+											<center class="footer-block">
+												<a href="/contacts">Контакты</a>
+												&nbsp;•&nbsp;
+												<a href="/about">О нас</a>
+												&nbsp;•&nbsp;
+				© 2015 «PIZZA LAND» - Все права защищены  •
+												<a href="">Партнеры</a>
+												&nbsp;•&nbsp;
+												<a href="">Разработчики</a>
+												&nbsp;•&nbsp;
+											</center>
+										</div>
+</div>
+<!--end outer-->
+</body>
+</html>
+
