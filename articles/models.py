@@ -9,10 +9,11 @@ class Articles(models.Model):
         verbose_name_plural = "статьи"
 
     Title = models.CharField(max_length=250, verbose_name="Название")
-    Description = models.TextField(verbose_name="Текст", null=True)
+    Text = models.TextField(verbose_name="Текст", blank=True, null=True)
     Author = models.CharField(max_length=50, verbose_name="Автор")
     Date = models.DateTimeField(verbose_name="ДатаРазмещения")
-    Photo = models.ImageField(upload_to='uploads/articleimages', blank=True, verbose_name="Фото")
+    Photo = models.ImageField(upload_to='uploads/articleImages', default="uploads/articleImages/default_avatar.png",
+                              blank=True, verbose_name="Фото")
 
     def __unicode__(self):
         return self.title

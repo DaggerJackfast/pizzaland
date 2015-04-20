@@ -23,15 +23,16 @@ class Product(models.Model):
 
     Title = models.CharField(max_length=200, verbose_name="Название")
     Title_English = models.CharField(max_length=200, verbose_name="НазваниеПоАнглийски")
-    Price = models.DecimalField(max_digits=12, decimal_places=2, verbose_name="Цена")
-    Description = models.TextField(verbose_name="Описание")
+    Price = models.DecimalField(max_digits=12, decimal_places=2, verbose_name="Цена", default=0.00)
+    Description = models.TextField(verbose_name="Описание", blank=True)
     ProductCategory = models.ForeignKey(Category, verbose_name="Категория")
     Discount = models.FloatField(verbose_name="Скидка")
     Status = models.BooleanField(default=False, verbose_name="Статус")
-    Photo = models.ImageField(upload_to='uploads/productimages', verbose_name="Фото")
-    Weight = models.FloatField(verbose_name="Вес")
-    Diameter = models.FloatField(verbose_name="Диаметр")
-    Ingredients = models.TextField(verbose_name="Ингридиенты")
+    Photo = models.ImageField(upload_to='uploads/productImages', default="uploads/productsImages/default_image.png",
+                              verbose_name="Фото")
+    Weight = models.FloatField(verbose_name="Вес", default=0.00)
+    Diameter = models.FloatField(verbose_name="Диаметр", default=0.00)
+    Ingredients = models.TextField(verbose_name="Ингридиенты", blank=True)
 
     def __unicode__(self):
         return self.title
