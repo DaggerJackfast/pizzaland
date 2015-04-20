@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project version="4" />
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="PostgreSQL - pizzalanddb@localhost" uuid="586eca60-7869-4a2f-9ef2-44a3f6eb9a26">
+      <secret-storage>master_key</secret-storage>
+      <user-name>pizzalanduser</user-name>
+      <schema-pattern>pizzalanddb.pg_catalog pizzalanddb.public</schema-pattern>
+      <default-schemas>pizzalanddb.pg_catalog pizzalanddb.public</default-schemas>
+    </data-source>
+  </component>
+</project>

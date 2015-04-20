@@ -12,7 +12,7 @@ class Articles(models.Model):
     Text = models.TextField(verbose_name="Текст", blank=True, null=True)
     Author = models.CharField(max_length=50, verbose_name="Автор")
     Date = models.DateTimeField(verbose_name="ДатаРазмещения")
-    Photo = models.ImageField(upload_to='uploads/articleImages', default="uploads/articleImages/default_avatar.png",
+    Photo = models.ImageField(upload_to='uploads/articleImages', default="uploads/articleImages/default_image.png",
                               blank=True, verbose_name="Фото")
 
     def __unicode__(self):

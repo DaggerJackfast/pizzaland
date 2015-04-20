@@ -26,7 +26,7 @@ class Product(models.Model):
     Price = models.DecimalField(max_digits=12, decimal_places=2, verbose_name="Цена", default=0.00)
     Description = models.TextField(verbose_name="Описание", blank=True)
     ProductCategory = models.ForeignKey(Category, verbose_name="Категория")
-    Discount = models.FloatField(verbose_name="Скидка")
+    Discount = models.FloatField(verbose_name="Скидка", default=0.00)
     Status = models.BooleanField(default=False, verbose_name="Статус")
     Photo = models.ImageField(upload_to='uploads/productImages', default="uploads/productsImages/default_image.png",
                               verbose_name="Фото")
